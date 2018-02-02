@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc \
     ueventd.qcom.rc
 
+# Dex
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
