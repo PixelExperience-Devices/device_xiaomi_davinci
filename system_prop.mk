@@ -48,6 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
+    debug.sf.early_phase_offset_ns=5000000 \
     debug.sf.enable_hwc_vds=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
