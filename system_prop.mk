@@ -47,6 +47,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.iop.enable_prefetch_ofr=1 \
     vendor.iop.enable_uxe=0
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.settings.xml=/system/etc/media_profiles_vendor.xml
+
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
