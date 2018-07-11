@@ -4,6 +4,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.btstack.enable.splita2dp=true \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
 
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=true
+
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
