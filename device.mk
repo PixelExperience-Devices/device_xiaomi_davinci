@@ -36,6 +36,10 @@ TARGET_SCREEN_WIDTH := 1080
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
