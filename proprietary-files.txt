@@ -101,6 +101,15 @@ product/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 
+# Media
+lib/libFileMux.so
+lib/libmmosal.so
+lib/libmmparser_lite.so
+lib/libOmxMux.so
+lib64/libmmosal.so
+-vendor/lib/libplatformconfig.so:lib/libplatformconfig.so
+-vendor/lib64/libplatformconfig.so:lib64/libplatformconfig.so
+
 # Power-off charging daemon
 bin/charger
 
@@ -118,3 +127,49 @@ product/framework/QtiTelephonyServicelibrary.jar
 product/framework/qcrilhook.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 product/framework/qti-telephony-common.jar
+
+# WiFi Display
+bin/wfdservice
+etc/init/wfdservice.rc
+etc/wfdconfigsink.xml
+-framework/WfdCommon.jar
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib/libmmrtpdecoder.so
+lib/libmmrtpencoder.so
+lib/libwfdaac.so
+lib/libwfdavenhancements.so
+lib/libwfdclient.so
+lib/libwfdcommonutils.so
+lib/libwfdconfigutils.so
+lib/libwfdmminterface.so
+lib/libwfdmmsink.so
+lib/libwfdmmsrc_system.so
+lib/libwfdrtsp.so
+lib/libwfdservice.so
+lib/libwfdsinksm.so
+lib/libwfdsm.so
+lib/libwfduibcinterface.so
+lib/libwfduibcsink.so
+lib/libwfduibcsinkinterface.so
+lib/libwfduibcsrc.so
+lib/libwfduibcsrcinterface.so
+lib64/libFileMux.so
+lib64/libmmparser_lite.so
+lib64/libmmrtpdecoder.so
+lib64/libmmrtpencoder.so
+lib64/libwfdclient.so
+lib64/libwfdcommonutils.so
+lib64/libwfdconfigutils.so
+lib64/libwfdmminterface.so
+lib64/libwfdmmsink.so
+lib64/libwfdnative.so
+lib64/libwfdrtsp.so
+lib64/libwfdsinksm.so
+lib64/libwfdsm.so
+lib64/libwfduibcinterface.so
+lib64/libwfduibcsink.so
+lib64/libwfduibcsinkinterface.so
+lib64/libwfduibcsrc.so
+lib64/libwfduibcsrcinterface.so
+-priv-app/WfdService/WfdService.apk
+product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so

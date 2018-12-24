@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default
+    audio.a2dp.default \
+    libaacwrapper
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -54,7 +55,8 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libvulkan
+    libvulkan \
+    vendor.display.config@1.0
 
 # FM
 PRODUCT_PACKAGES += \
@@ -86,3 +88,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
