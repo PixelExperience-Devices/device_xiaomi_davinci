@@ -46,6 +46,9 @@ extern "C" {
 #define INTERACTIVE_GOVERNOR "interactive"
 #define MSMDCVS_GOVERNOR "msm-dcvs"
 
+#define INPUT_EVENT_WAKUP_MODE_OFF 4
+#define INPUT_EVENT_WAKUP_MODE_ON 5
+
 #define HINT_HANDLED (0)
 #define HINT_NONE (-1)
 

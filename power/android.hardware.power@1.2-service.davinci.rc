@@ -2,4 +2,4 @@ service vendor.power-hal-1-2 /system/bin/hw/android.hardware.power@1.2-service.d
     override
     class hal
     user system
-    group system
+    group system input

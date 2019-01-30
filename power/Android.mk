@@ -37,6 +37,13 @@ LOCAL_HEADER_LIBRARIES += libutils_headers
 LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 LOCAL_CFLAGS += -Werror -Wall -Wno-unused-parameter
-LOCAL_CFLAGS += -DINTERACTION_BOOST
+
+ifneq ($(TARGET_TAP_TO_WAKE_NODE),)
+    LOCAL_CFLAGS += -DTAP_TO_WAKE_NODE=\"$(TARGET_TAP_TO_WAKE_NODE)\"
+endif
+
+ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
+    LOCAL_CFLAGS += -DINTERACTION_BOOST
+endif
 
 include $(BUILD_EXECUTABLE)
