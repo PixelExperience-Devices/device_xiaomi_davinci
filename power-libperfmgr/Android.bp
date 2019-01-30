@@ -50,4 +50,8 @@ cc_binary {
         "aidl/Power.cpp",
         "aidl/PowerExt.cpp",
     ],
+	header_libs: [
+        "libhardware_headers",
+        "generated_kernel_headers",
+    ],
 }
