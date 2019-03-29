@@ -138,7 +138,11 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.davinci
+    android.hardware.power@1.3-service.davinci-libperfmgr \
+    powerhint.json
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/perf-profile0.conf
 
 # Telephony
 PRODUCT_PACKAGES += \

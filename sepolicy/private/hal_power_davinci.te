@@ -1,0 +1,5 @@
+type hal_power_davinci, coredomain, domain;
+hal_server_domain(hal_power_davinci, hal_power)
+
+type hal_power_davinci_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(hal_power_davinci)
