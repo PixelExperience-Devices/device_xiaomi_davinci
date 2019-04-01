@@ -1,5 +1,7 @@
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bluetooth.bqr.event_mask=14 \
+    persist.bluetooth.bqr.min_interval_ms=500 \
     vendor.bluetooth.soc=cherokee \
     persist.vendor.btstack.enable.splita2dp=true \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
