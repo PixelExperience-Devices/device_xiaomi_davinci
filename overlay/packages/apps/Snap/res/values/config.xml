@@ -25,4 +25,12 @@
 
     <!-- Opens front camera using openLegacy() and forces api v1 -->
     <bool name="front_camera_open_legacy">false</bool>
+
+    <!-- Number of supported cameras.
+         Helpful when a HAL reports more devices than it should.
+         A value of -1 enables support for all available cameras reported by HAL -->
+    <integer name="number_of_supported_cameras">4</integer>
+
+    <!-- Enable support for bokeh mode -->
+    <bool name="support_bokeh_mode">true</bool>
 </resources>
