@@ -59,7 +59,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_phase_offset_ns=500000 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.enable_hwc_vds=1 \
-    debug.hwui.renderer=skiavk
+    debug.hwui.renderer=opengl
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
