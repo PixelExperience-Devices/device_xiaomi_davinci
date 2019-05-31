@@ -89,6 +89,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
 
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService \
+    org.ifaa.android.manager
+
+PRODUCT_BOOT_JARS += \
+    org.ifaa.android.manager
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
