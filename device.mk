@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.7
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    lineage.biometrics.fingerprint.inscreen@1.0-service.davinci
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
