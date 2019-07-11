@@ -58,6 +58,10 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# HotwordEnrollement
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
