@@ -25,13 +25,6 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := davinci
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Redmi K20
 PRODUCT_NAME := aosp_davinci
-
-BUILD_FINGERPRINT := "Xiaomi/davinci/davinci:10/QKQ1.190825.002/V11.0.3.0.QFJMIXM:user/release-keys"
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="davinci" \
-    TARGET_DEVICE="davinci"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
