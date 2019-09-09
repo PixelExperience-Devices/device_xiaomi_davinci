@@ -39,6 +39,8 @@ TARGET_SCREEN_WIDTH := 1080
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml \
