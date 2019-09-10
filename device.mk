@@ -39,6 +39,10 @@ TARGET_SCREEN_WIDTH := 1080
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
