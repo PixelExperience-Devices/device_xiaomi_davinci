@@ -1,7 +1,7 @@
 type hal_fod_davinci, coredomain, domain;
 hal_server_domain(hal_fod_davinci, hal_lineage_fod)
 
-type hal_fod_davinci_exec, exec_type, file_type;
+type hal_fod_davinci_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(hal_fod_davinci)
 
 # Allow access to the HALs

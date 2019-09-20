@@ -27,7 +27,7 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#define LOG_TAG "android.hardware.power@1.2-service.davinci"
+#define LOG_TAG "android.hardware.power@1.2-service"
 
 #include <android/log.h>
 #include <hidl/HidlTransportSupport.h>

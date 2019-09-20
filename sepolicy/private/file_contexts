@@ -6,7 +6,14 @@
 
 # HALs
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.davinci                  u:object_r:hal_fod_davinci_exec:s0
+/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service    u:object_r:hal_light_default_exec:s0
+/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware.power@1\.2-service     u:object_r:hal_power_default_exec:s0
+/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.usb@1\.0-service      u:object_r:hal_usb_default_exec:s0
 
 # Fingerprint
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param                u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                                                    u:object_r:sysfs_tp_fodstatus:s0
+
+# Vendor overlay
+/(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?      u:object_r:vendor_configs_file:s0
+/(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/hw    u:object_r:vendor_hal_file:s0

@@ -3,3 +3,6 @@ allow init {
     sysfs_graphics
     sysfs_tp_fodstatus
 }:file { open read setattr };
+
+# Allow init to mount vendor configs
+allow init vendor_configs_file:dir mounton;
