@@ -164,3 +164,8 @@ on property:sys.boot_completed=1
 service vendor.power-hal-1-2 /system/bin/true
     disabled
 
+service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
+    override
+    class late_start
+    user system
+    group system input
