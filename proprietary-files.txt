@@ -126,7 +126,9 @@ product/etc/permissions/telephonyservice.xml
 product/framework/QtiTelephonyServicelibrary.jar
 product/framework/qcrilhook.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-product/framework/qti-telephony-common.jar
+
+# Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
+product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
 
 # WiFi Display
 bin/wfdservice
