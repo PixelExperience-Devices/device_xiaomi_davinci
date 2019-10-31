@@ -1,8 +1,18 @@
+# firmware
 type adsprpcd_file, file_type;
 type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
 
+# sysfs
 type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_kgsl, sysfs_type, fs_type;
+type sysfs_devfreq, sysfs_type, fs_type;
+type debugfs_sched_features, debugfs_type, fs_type;
+type sysfs_msm_boot, sysfs_type, fs_type;
 
+# dev
+type latency_device, dev_type;
+
+# vendor
 type vendor_firmware_file, vendor_file_type, file_type;
