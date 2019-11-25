@@ -134,3 +134,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Wallpapers
+PRODUCT_PACKAGES += \
+    WallpapersBReel2019

@@ -9,5 +9,11 @@
     "repository": "vendor_xiaomi_davinci",
     "target_path": "vendor/xiaomi/davinci",
     "branch": "ten"
+  },
+  {
+    "repository": "packages_apps_WallpapersBReel2019",
+    "target_path": "packages/apps/WallpapersBReel2019",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
   }
 ]
