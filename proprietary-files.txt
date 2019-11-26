@@ -113,6 +113,20 @@ lib64/libmmosal.so
 -vendor/lib/libplatformconfig.so:lib/libplatformconfig.so
 -vendor/lib64/libplatformconfig.so:lib64/libplatformconfig.so
 
+# Popup camera sound effects
+media/audio/ui/popup_cangmen_down.ogg:product/media/audio/ui/popup_cangmen_down.ogg
+media/audio/ui/popup_cangmen_up.ogg:product/media/audio/ui/popup_cangmen_up.ogg
+media/audio/ui/popup_chilun_down.ogg:product/media/audio/ui/popup_chilun_down.ogg
+media/audio/ui/popup_chilun_up.ogg:product/media/audio/ui/popup_chilun_up.ogg
+media/audio/ui/popup_jijia_down.ogg:product/media/audio/ui/popup_jijia_down.ogg
+media/audio/ui/popup_jijia_up.ogg:product/media/audio/ui/popup_jijia_up.ogg
+media/audio/ui/popup_mofa_down.ogg:product/media/audio/ui/popup_mofa_down.ogg
+media/audio/ui/popup_mofa_up.ogg:product/media/audio/ui/popup_mofa_up.ogg
+media/audio/ui/popup_muqin_down.ogg:product/media/audio/ui/popup_muqin_down.ogg
+media/audio/ui/popup_muqin_up.ogg:product/media/audio/ui/popup_muqin_up.ogg
+media/audio/ui/popup_yingyan_down.ogg:product/media/audio/ui/popup_yingyan_down.ogg
+media/audio/ui/popup_yingyan_up.ogg:product/media/audio/ui/popup_yingyan_up.ogg
+
 # RIL
 etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qti_libpermissions.xml
