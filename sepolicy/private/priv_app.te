@@ -1,2 +1,6 @@
+dontaudit priv_app bt_firmware_file:filesystem getattr;
+dontaudit priv_app firmware_file:filesystem getattr;
+dontaudit priv_app mnt_vendor_file:dir search;
+
 allow priv_app sysfs_kgsl:file rw_file_perms;
 allow priv_app sysfs_kgsl:dir r_dir_perms;

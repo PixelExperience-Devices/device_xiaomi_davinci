@@ -1,2 +1,6 @@
+dontaudit untrusted_app_25 bt_firmware_file:filesystem getattr;
+dontaudit untrusted_app_25 firmware_file:filesystem getattr;
+dontaudit untrusted_app_25 mnt_vendor_file:dir search;
+
 allow untrusted_app_25 sysfs_graphics:file r_file_perms;
 allow untrusted_app_25 sysfs_ufshc:file r_file_perms;

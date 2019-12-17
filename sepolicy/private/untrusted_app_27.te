@@ -1,3 +1,7 @@
+dontaudit untrusted_app_27 bt_firmware_file:filesystem getattr;
+dontaudit untrusted_app_27 firmware_file:filesystem getattr;
+dontaudit untrusted_app_27 mnt_vendor_file:dir search;
+
 allow untrusted_app_27 proc_net:dir r_dir_perms;
 allow untrusted_app_27 proc_net:file r_file_perms;
 
