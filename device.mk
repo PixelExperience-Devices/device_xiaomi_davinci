@@ -48,6 +48,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
+# AOT Preload
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    NexusLauncherRelease
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -63,10 +68,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.safailnet.rc \
     ueventd.qcom.rc
-
-# Dex
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
 
 # Display
 PRODUCT_PACKAGES += \
