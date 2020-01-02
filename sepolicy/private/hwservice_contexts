@@ -1,1 +1,2 @@
 vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint    u:object_r:hal_fingerprint_hwservice_xiaomi:s0
+vendor.xiaomi.hardware.displayfeature::IDisplayFeature             u:object_r:hal_displayfeature_xiaomi_hwservice:s0
