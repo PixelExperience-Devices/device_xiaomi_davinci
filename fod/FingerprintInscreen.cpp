@@ -23,7 +23,7 @@
 #include <cmath>
 
 #define COMMAND_NIT 10
-#define PARAM_NIT_FOD 3
+#define PARAM_NIT_630_FOD 1
 #define PARAM_NIT_NONE 0
 
 #define DISPPARAM_PATH "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param"
@@ -38,7 +38,13 @@
 
 #define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
 
-namespace {
+namespace vendor {
+namespace lineage {
+namespace biometrics {
+namespace fingerprint {
+namespace inscreen {
+namespace V1_0 {
+namespace implementation {
 
 template <typename T>
 static T get(const std::string& path, const T& def) {
@@ -53,16 +59,6 @@ static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
 }
-
-} // anonymous namespace
-
-namespace vendor {
-namespace lineage {
-namespace biometrics {
-namespace fingerprint {
-namespace inscreen {
-namespace V1_0 {
-namespace implementation {
 
 FingerprintInscreen::FingerprintInscreen() {
     this->mFodCircleVisible = false;
@@ -93,7 +89,7 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 Return<void> FingerprintInscreen::onPress() {
     set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_ON);
     TouchFeatureService->setTouchMode(Touch_Fod_Enable, 1);
-    xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
+    xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     return Void();
 }
 
@@ -132,9 +128,9 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
     return Void();
 }
 
-Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
-    int realBrightness = get(BRIGHTNESS_PATH, 0);
+Return<int32_t> FingerprintInscreen::getDimAmount(int32_t) {
     float alpha;
+    int realBrightness = get(BRIGHTNESS_PATH, 0);
 
     if (realBrightness > 500) {
         alpha = 1.0 - pow(realBrightness / 2047.0 * 430.0 / 600.0, 0.455);
@@ -149,7 +145,7 @@ Return<bool> FingerprintInscreen::shouldBoostBrightness() {
     return false;
 }
 
-Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallback>& /* callback */) {
+Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallback>&) {
     return Void();
 }
 
