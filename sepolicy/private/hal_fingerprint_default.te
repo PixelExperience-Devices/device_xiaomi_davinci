@@ -1,0 +1,4 @@
+# Ignore all logging requests
+dontaudit hal_fingerprint storage_file:dir search;
+
+set_prop(hal_fingerprint, gf_debug_prop)

@@ -1,0 +1,26 @@
+type hal_fod_davinci, coredomain, domain;
+hal_server_domain(hal_fod_davinci, hal_lineage_fod)
+
+type hal_fod_davinci_exec, exec_type, file_type;
+init_daemon_domain(hal_fod_davinci)
+
+# Allow access to the HALs
+hal_client_domain(hal_fod_davinci, hal_fingerprint)
+
+# Allow binder communication with hal_fingerprint
+binder_call(hal_fod_davinci, hal_fingerprint)
+
+add_hwservice(hal_fod_davinci, hal_fingerprint_hwservice_xiaomi)
+allow hal_fod_davinci hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
+
+# Allow binder communication with platform_app
+binder_call(hal_fod_davinci, platform_app)
+
+# Grant FOD access over the control nodes
+allow hal_fod_davinci {
+    sysfs_tp_fodstatus
+    sysfs_graphics
+}:file rw_file_perms;
+
+set_prop(hal_fod_davinci, sysfs_graphics)
+set_prop(hal_fod_davinci, sysfs_tp_fodstatus)
