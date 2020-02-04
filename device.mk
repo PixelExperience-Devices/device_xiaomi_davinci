@@ -86,7 +86,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libvulkan \
-    vendor.display.config@1.0
+    vendor.display.config@1.7
 
 # FM
 PRODUCT_PACKAGES += \
