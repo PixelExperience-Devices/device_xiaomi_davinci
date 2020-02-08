@@ -15,9 +15,6 @@ vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/li
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
-# Camera - from davinci - QKQ1.190825.002-9.9.26
-vendor/lib64/hw/camera.qcom.so:product/vendor_overlay/29/lib64/hw/camera.qcom.so|d418178613ff5c7e67dc402aa5d36c95c8d62e38
-
 # CNE
 product/framework/com.quicinc.cne.api-V1.1-java.jar
 product/framework/com.quicinc.cne.constants-V1.0-java.jar
