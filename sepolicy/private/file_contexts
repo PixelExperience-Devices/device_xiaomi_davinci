@@ -12,7 +12,6 @@
 
 # Fingerprint
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param                u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/touch/tp_dev/fod_status                                                    u:object_r:sysfs_tp_fodstatus:s0
 
 # Vendor overlay
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?      u:object_r:vendor_configs_file:s0

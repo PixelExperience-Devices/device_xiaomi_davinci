@@ -18,9 +18,7 @@ binder_call(hal_fod_davinci, platform_app)
 
 # Grant FOD access over the control nodes
 allow hal_fod_davinci {
-    sysfs_tp_fodstatus
     sysfs_graphics
 }:file rw_file_perms;
 
 set_prop(hal_fod_davinci, sysfs_graphics)
-set_prop(hal_fod_davinci, sysfs_tp_fodstatus)
