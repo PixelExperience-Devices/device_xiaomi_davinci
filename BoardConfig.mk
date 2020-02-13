@@ -54,7 +54,7 @@ NEED_KERNEL_MODULE_SYSTEM := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/davinci
-TARGET_KERNEL_CONFIG := vendor/lineage_davinci_defconfig
+TARGET_KERNEL_CONFIG := davinci_defconfig
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true

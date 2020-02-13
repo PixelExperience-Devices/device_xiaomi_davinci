@@ -1,13 +1,13 @@
 [
   {
-    "repository": "davinci-dev/android_kernel_xiaomi_davinci",
+    "repository": "raysenlau/kernel_xiaomi_davinci",
     "target_path": "kernel/xiaomi/davinci",
-    "branch": "lineage-17.1",
+    "branch": "ten",
     "remote": "github"
   },
   {
-    "repository": "vendor_xiaomi_davinci",
-    "target_path": "vendor/xiaomi/davinci",
+    "repository": "vendor_xiaomi",
+    "target_path": "vendor/xiaomi",
     "branch": "ten"
   },
   {
