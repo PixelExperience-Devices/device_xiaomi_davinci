@@ -10,6 +10,10 @@ hal_client_domain(hal_fod_davinci, hal_fingerprint)
 # Allow binder communication with hal_fingerprint
 binder_call(hal_fod_davinci, hal_fingerprint)
 
+# Allow binder communication with hal_touchfeature_xiaomi_default
+type hal_touchfeature_xiaomi_default, domain;
+binder_call(hal_fod_davinci, hal_touchfeature_xiaomi_default)
+
 add_hwservice(hal_fod_davinci, hal_fingerprint_hwservice_xiaomi)
 allow hal_fod_davinci hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
 
@@ -20,5 +24,7 @@ binder_call(hal_fod_davinci, platform_app)
 allow hal_fod_davinci {
     sysfs_graphics
 }:file rw_file_perms;
+
+allow hal_fod_davinci sysfs_graphics:dir search;
 
 set_prop(hal_fod_davinci, sysfs_graphics)
