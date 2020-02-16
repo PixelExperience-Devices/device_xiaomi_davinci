@@ -24,9 +24,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.eyecare.threshold=11 \
-    ro.vendor.eyecare.level=5 \
-    ro.vendor.hist.threshold=7 \
     ro.sf.lcd_density=440 \
     ro.vendor.display.ad=1 \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
