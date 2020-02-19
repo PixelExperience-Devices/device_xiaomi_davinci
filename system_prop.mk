@@ -1,3 +1,18 @@
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.ssr=false \
+    ro.qc.sdk.audio.fluencetype=none \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    persist.audio.button_jack.profile=volume \
+    persist.audio.button_jack.switch=0 \
+    tunnel.audio.encode = true \
+    audio.offload.buffer.size.kb=32 \
+    av.offload.enable=true \
+    use.voice.path.for.pcm.voip=true \
+    audio.offload.gapless.enabled=true
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.bqr.event_mask=14 \
