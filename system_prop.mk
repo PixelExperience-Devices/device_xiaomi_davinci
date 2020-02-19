@@ -42,6 +42,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
+# HBM
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.hbm.enable=true
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
@@ -65,7 +69,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
-
 
 # QC framework value-adds
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
