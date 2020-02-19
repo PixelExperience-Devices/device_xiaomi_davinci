@@ -100,3 +100,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# WLAN
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wlan.vendor=qcom \
+    ro.wlan.chip=39xx \
+    ro.wlan.mimo=0 \
+    ro.hardware.wlan.vendor=qcom \
+    ro.hardware.wlan.chip=39xx \
+    ro.hardware.wlan.mimo=1
