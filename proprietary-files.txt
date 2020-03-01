@@ -77,6 +77,9 @@ lib/libfm-hci.so
 product/lib64/vendor.qti.hardware.fm@1.0.so
 product/lib/vendor.qti.hardware.fm@1.0.so
 
+# Firmware - from LA.UM.8.9.r1-07100-SM6xx.0
+vendor/firmware/a618_gmu.bin:product/vendor_overlay/29/firmware/a618_gmu.bin|cb773d4b34f610d53a4a2766e0fec5d7dd2c5982
+
 # HotwordEnrollment
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED|78d1ef42447dcae6c506ee35a6bea0dd7612af7c
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED|0741b5ada5d9da2227b4ff0bc77c3be7d6eb430b

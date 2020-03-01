@@ -4,3 +4,5 @@ type firmware_file, file_type;
 type persist_file, file_type;
 
 type sysfs_graphics, sysfs_type, fs_type;
+
+type vendor_firmware_file, vendor_file_type, file_type;
