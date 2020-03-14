@@ -58,11 +58,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
-# AOT Preload
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
