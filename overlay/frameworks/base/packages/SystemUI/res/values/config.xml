@@ -32,4 +32,7 @@
     <integer name="config_maxVisibleNotificationIcons">7</integer>
     <integer name="config_maxVisibleNotificationIconsWhenDark">8</integer>
 
+    <!-- Whether to show biometric help only when failed -->
+    <bool name="config_biometricHelpShowOnlyWhenFailed">true</bool>
+
 </resources>
