@@ -111,6 +111,11 @@ public class PopupCameraService extends Service {
     private SoundPool mSoundPool;
     private int[] mSounds = new int[mSoundNames.length];
 
+    // Alert dialog
+    private AlertDialog mAlertDialog;
+    private AlertDialog mProximityObstructedDialog;
+    private CountDownTimer mCountDownTimer;
+
     @Override
     public void onCreate() {
         mSensorManager = getSystemService(SensorManager.class);
@@ -156,6 +161,7 @@ public class PopupCameraService extends Service {
             if (DEBUG) Log.d(TAG, "Proximity sensor: isNear " + mProximityNear);
             if (!mProximityNear && mShouldTryUpdateMotor){
                 if (DEBUG) Log.d(TAG, "Proximity sensor: mShouldTryUpdateMotor " + mShouldTryUpdateMotor);
+                dismissAllAlerts();
                 mShouldTryUpdateMotor = false;
                 updateMotor();
             }
@@ -178,26 +184,27 @@ public class PopupCameraService extends Service {
             return;
         }
         mDialogShowing = true;
+        dismissAllAlerts();
         mHandler.post(() -> {
             Resources res = getResources();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, R.style.SystemAlertDialogTheme)
                     .setTitle(res.getString(R.string.popup_camera_tip))
                     .setMessage(res.getString(R.string.stop_operate_camera_frequently))
                     .setPositiveButton(res.getString(android.R.string.ok) + " (5)", null);
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-            alertDialog.setCancelable(false);
-            alertDialog.setCanceledOnTouchOutside(false);
-            alertDialog.show();
-            alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            mAlertDialog = alertDialogBuilder.create();
+            mAlertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+            mAlertDialog.setCancelable(false);
+            mAlertDialog.setCanceledOnTouchOutside(false);
+            mAlertDialog.show();
+            mAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override
                 public void onDismiss(DialogInterface dialogInterface) {
                     mDialogShowing = false;
                 }
             });
-            final Button btn = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+            final Button btn = mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
             btn.setEnabled(false);
-            CountDownTimer countDownTimer = new CountDownTimer(6000, 1000) {
+            mCountDownTimer = new CountDownTimer(6000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     btn.setText(res.getString(android.R.string.ok) + " (" + Long.valueOf(millisUntilFinished / 1000) + ")");
@@ -209,7 +216,21 @@ public class PopupCameraService extends Service {
                     btn.setText(res.getString(android.R.string.ok));
                 }
             };
-            countDownTimer.start();
+            mCountDownTimer.start();
+        });
+    }
+
+    private void showProximitySensorObstructedDialog(){
+        dismissAllAlerts();
+        mHandler.post(() -> {
+            Resources res = getResources();
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, R.style.SystemAlertDialogTheme)
+                    .setMessage(res.getString(R.string.popup_camera_proximity_obstructed));
+            mProximityObstructedDialog = alertDialogBuilder.create();
+            mProximityObstructedDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+            mProximityObstructedDialog.setCancelable(false);
+            mProximityObstructedDialog.setCanceledOnTouchOutside(false);
+            mProximityObstructedDialog.show();
         });
     }
 
@@ -300,6 +321,9 @@ public class PopupCameraService extends Service {
             final String action = intent.getAction();
             if (Intent.ACTION_CAMERA_STATUS_CHANGED.equals(action)) {
                mCameraState = intent.getExtras().getString(Intent.EXTRA_CAMERA_STATE);
+               if (mCameraState.equals(closeCameraState)){
+                   dismissProximityObstructedDialog();
+               }
                updateMotor();
             }else if (Intent.ACTION_SCREEN_OFF.equals(action) || Intent.ACTION_SHUTDOWN.equals(action)) {
                 if (mCameraState.equals(openCameraState)){
@@ -332,6 +356,7 @@ public class PopupCameraService extends Service {
                             mSensorManager.registerListener(mFreeFallListener, mFreeFallSensor, SensorManager.SENSOR_DELAY_NORMAL);
                             checkFrequentOperate();
                         }else{
+                            showProximitySensorObstructedDialog();
                             mShouldTryUpdateMotor = true;
                         }
                     } else if (mCameraState.equals(closeCameraState) && (status == MOTOR_STATUS_POPUP_OK || status == MOTOR_STATUS_CALIB_OK)) {
@@ -374,6 +399,7 @@ public class PopupCameraService extends Service {
             return;
         }
         mDialogShowing = true;
+        dismissAllAlerts();
         mHandler.post(() -> {
             Resources res = getResources();
             int dialogMessageResId = mMotorCalibrating ? R.string.popup_camera_calibrate_running : (status == MOTOR_STATUS_CALIB_OK ?
@@ -382,12 +408,12 @@ public class PopupCameraService extends Service {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, R.style.SystemAlertDialogTheme);
             alertDialogBuilder.setMessage(res.getString(dialogMessageResId));
             alertDialogBuilder.setPositiveButton(android.R.string.ok, null);
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-            alertDialog.setCancelable(false);
-            alertDialog.setCanceledOnTouchOutside(false);
-            alertDialog.show();
-            alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            mAlertDialog = alertDialogBuilder.create();
+            mAlertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+            mAlertDialog.setCancelable(false);
+            mAlertDialog.setCanceledOnTouchOutside(false);
+            mAlertDialog.show();
+            mAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override
                 public void onDismiss(DialogInterface dialogInterface) {
                     mDialogShowing = false;
@@ -402,6 +428,7 @@ public class PopupCameraService extends Service {
         }
         mDialogShowing = true;
         goBackHome();
+        dismissAllAlerts();
         mHandler.post(() -> {
             boolean needsCalib = false;
             if (status == MOTOR_STATUS_REQUEST_CALIB || status == MOTOR_STATUS_CALIB_ERROR){
@@ -442,12 +469,12 @@ public class PopupCameraService extends Service {
             }else{
                 alertDialogBuilder.setPositiveButton(android.R.string.ok, null);
             }
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-            alertDialog.setCancelable(false);
-            alertDialog.setCanceledOnTouchOutside(false);
-            alertDialog.show();
-            alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            mAlertDialog = alertDialogBuilder.create();
+            mAlertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+            mAlertDialog.setCancelable(false);
+            mAlertDialog.setCanceledOnTouchOutside(false);
+            mAlertDialog.show();
+            mAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override
                 public void onDismiss(DialogInterface dialogInterface) {
                     mDialogShowing = false;
@@ -499,6 +526,30 @@ public class PopupCameraService extends Service {
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
         }
     };
+
+    private void dismissAllAlerts(){
+        mHandler.post(() -> {
+            if (mCountDownTimer != null){
+                mCountDownTimer.cancel();
+                mCountDownTimer = null;
+            }
+            if (mAlertDialog != null){
+                mAlertDialog.dismiss();
+                mDialogShowing = false;
+                mAlertDialog = null;
+            }
+        });
+        dismissProximityObstructedDialog();
+    }
+
+    private void dismissProximityObstructedDialog(){
+        mHandler.post(() -> {
+            if (mProximityObstructedDialog != null){
+                mProximityObstructedDialog.dismiss();
+                mProximityObstructedDialog = null;
+            }
+        });
+    }
 
     public void goBackHome() {
         Intent homeIntent = new Intent(Intent.ACTION_MAIN);
