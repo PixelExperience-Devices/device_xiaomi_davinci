@@ -24,7 +24,6 @@ import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
-import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.fod.FodUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -37,7 +36,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
-        PopupCameraUtils.startService(context);
         FodUtils.startService(context);
     }
 }
