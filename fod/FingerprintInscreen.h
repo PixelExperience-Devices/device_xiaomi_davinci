@@ -57,14 +57,13 @@ class FingerprintInscreen : public IFingerprintInscreen {
     Return<void> switchHbm(bool enabled) override;
 
   private:
-    bool mFodCircleVisible;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
     sp<ITouchFeature> TouchFeatureService;
 };
 
 }  // namespace implementation
 }  // namespace V1_1
-}  // namespace inscreenx
+}  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace lineage
