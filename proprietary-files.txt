@@ -65,6 +65,10 @@ product/lib64/vendor.display.color@1.1.so
 product/lib64/vendor.display.color@1.2.so
 product/lib64/vendor.display.color@1.3.so
 
+# DRM - Widevine
+vendor/lib/liboemcrypto.so:product/vendor_overlay/29/lib/liboemcrypto.so|d1d433d460266194f1385df9fe1dce5c2eeb4337
+vendor/lib64/liboemcrypto.so:product/vendor_overlay/29/lib64/liboemcrypto.so|55092595072548104cf66f7a610f53d65c04dd65
+
 # FM
 lib64/fm_helium.so
 lib64/libfm-hci.so
