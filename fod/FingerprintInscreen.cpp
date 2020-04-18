@@ -32,8 +32,6 @@
 #define FOD_SENSOR_Y 1931
 #define FOD_SENSOR_SIZE 190
 
-constexpr char kDozeBrightness[] = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/doze_brightness";
-
 namespace vendor {
 namespace lineage {
 namespace biometrics {
@@ -41,15 +39,6 @@ namespace fingerprint {
 namespace inscreen {
 namespace V1_1 {
 namespace implementation {
-
-template <typename T>
-static T get(const std::string& path, const T& def) {
-    std::ifstream file(path);
-    T result;
-
-    file >> result;
-    return file.fail() ? def : result;
-}
 
 template <typename T>
 static void set(const std::string& path, const T& value) {
@@ -106,22 +95,14 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
-    if (get(kDozeBrightness, 0) <= 0) {
-        TouchFeatureService->setTouchMode(11, 1);
-    }
-    if (get(kDozeBrightness, 0) < 1) {
-        xiaomiDisplayFeatureService->setFeature(0, 17, 1, 255);
-        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
-    }
+    xiaomiDisplayFeatureService->setFeature(0, 17, 1, 255);
+    xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
     TouchFeatureService->setTouchMode(10, 0);
-    TouchFeatureService->setTouchMode(11, 0);
-    if (get(kDozeBrightness, 0) < 1) {
-        xiaomiDisplayFeatureService->setFeature(0, 17, 0, 255);
-    }
+    xiaomiDisplayFeatureService->setFeature(0, 17, 0, 255);
     return Void();
 }
 
