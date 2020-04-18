@@ -28,11 +28,11 @@
 #define PARAM_NIT_630_FOD 1
 #define PARAM_NIT_NONE 0
 
-#define Touch_Fod_Enable 10
-
 #define FOD_SENSOR_X 445
 #define FOD_SENSOR_Y 1931
 #define FOD_SENSOR_SIZE 190
+
+constexpr char kDozeBrightness[] = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/doze_brightness";
 
 namespace vendor {
 namespace lineage {
@@ -41,6 +41,15 @@ namespace fingerprint {
 namespace inscreen {
 namespace V1_1 {
 namespace implementation {
+
+template <typename T>
+static T get(const std::string& path, const T& def) {
+    std::ifstream file(path);
+    T result;
+
+    file >> result;
+    return file.fail() ? def : result;
+}
 
 template <typename T>
 static void set(const std::string& path, const T& value) {
@@ -84,27 +93,35 @@ Return<void> FingerprintInscreen::switchHbm(bool enabled) {
 }
 
 Return<void> FingerprintInscreen::onPress() {
-    TouchFeatureService->setTouchMode(Touch_Fod_Enable, 1);
+    acquire_wake_lock(PARTIAL_WAKE_LOCK, LOG_TAG);
+    TouchFeatureService->setTouchMode(10, 1);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
+    release_wake_lock(LOG_TAG);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
-    acquire_wake_lock(PARTIAL_WAKE_LOCK, LOG_TAG);
-    xiaomiDisplayFeatureService->setFeature(0, 17, 1, 255);
-    xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
+    if (get(kDozeBrightness, 0) <= 0) {
+        TouchFeatureService->setTouchMode(11, 1);
+    }
+    if (get(kDozeBrightness, 0) < 1) {
+        xiaomiDisplayFeatureService->setFeature(0, 17, 1, 255);
+        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
+    }
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
-    TouchFeatureService->setTouchMode(Touch_Fod_Enable, 0);
-    xiaomiDisplayFeatureService->setFeature(0, 17, 0, 255);
-    release_wake_lock(LOG_TAG);
+    TouchFeatureService->setTouchMode(10, 0);
+    TouchFeatureService->setTouchMode(11, 0);
+    if (get(kDozeBrightness, 0) < 1) {
+        xiaomiDisplayFeatureService->setFeature(0, 17, 0, 255);
+    }
     return Void();
 }
 
