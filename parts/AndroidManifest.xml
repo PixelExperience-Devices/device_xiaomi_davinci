@@ -17,20 +17,15 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.lineageos.settings"
+    android:sharedUserId="android.uid.system"
     android:versionCode="1"
-    android:versionName="1.0"
-    android:sharedUserId="android.uid.system">
+    android:versionName="1.0">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-
-    <permission
-        android:name="org.pixelexperience.device.MANAGE_POPUP_CAMERA_SERVICE"
-        android:protectionLevel="signature|privileged" />
 
     <uses-sdk
         android:targetSdkVersion="29"/>
@@ -53,24 +48,27 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.sound" />
-            <meta-data android:name="com.android.settings.summary"
-                       android:resource="@string/dirac_summary" />
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/dirac_summary" />
         </activity>
 
-        <service android:name=".doze.DozeService"
-                 android:permission="XiaomiDozeService">
+        <service
+            android:name=".doze.DozeService"
+            android:permission="XiaomiDozeService">
         </service>
 
-        <service android:name="org.lineageos.settings.popupcamera.PopupCameraService"
-                 android:permission="org.pixelexperience.device.MANAGE_POPUP_CAMERA_SERVICE"
-                 android:exported="true"
-                 android:directBootAware="true">
+        <service
+            android:name=".popupcamera.PopupCameraService"
+            android:permission="PopupCameraService">
         </service>
 
-        <service android:name=".fod.FodService"
-                 android:permission="FodService">
+        <service
+            android:name=".fod.FodService"
+            android:permission="FodService">
         </service>
 
         <activity
@@ -86,6 +84,7 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.system" />
