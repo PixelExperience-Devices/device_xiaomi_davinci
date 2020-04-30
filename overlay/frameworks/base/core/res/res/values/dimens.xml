@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="rounded_corner_radius_bottom">84.0px</dimen>
-    <dimen name="rounded_corner_radius_top">84.0px</dimen>
+    <!-- Radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">103px</dimen>
+
     <dimen name="status_bar_height_portrait">35.0dip</dimen>
 </resources>
