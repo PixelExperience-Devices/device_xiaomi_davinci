@@ -69,7 +69,4 @@ void vendor_load_properties() {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
 
-    property_override("ro.oem_unlock_supported", "0");
-    property_override("ro.apex.updatable", "true");
-    property_override("vendor.display.disable_hw_recovery_dump", "0");
 }

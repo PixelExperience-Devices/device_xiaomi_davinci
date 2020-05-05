@@ -46,7 +46,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
-
+-include $(LOCAL_PATH)/product_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Permissions
