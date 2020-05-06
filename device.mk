@@ -141,11 +141,12 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.davinci-libperfmgr \
-    powerhint.json
+    android.hardware.power@1.3-service.davinci \
+    powerhint.json \
+    libperfmgr
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/perf-profile0.conf
+    $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/perf/perf-profile0.conf
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

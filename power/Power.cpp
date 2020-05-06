@@ -15,7 +15,7 @@
  */
 
 #define ATRACE_TAG (ATRACE_TAG_POWER | ATRACE_TAG_HAL)
-#define LOG_TAG "android.hardware.power@1.3-service.davinci-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.3-service"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
@@ -62,7 +62,7 @@ constexpr char kPowerHalStateProp[] = "vendor.powerhal.state";
 constexpr char kPowerHalAudioProp[] = "vendor.powerhal.audio";
 constexpr char kPowerHalInitProp[] = "vendor.powerhal.init";
 constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
-constexpr char kPowerHalConfigPath[] = "/system/etc/powerhint.json";
+constexpr char kPowerHalConfigPath[] = "/vendor/etc/powerhint.json";
 
 static const std::map<enum CameraStreamingMode, std::string> kCamStreamingHint = {
         {CAMERA_STREAMING_OFF, "CAMERA_STREAMING_OFF"},
