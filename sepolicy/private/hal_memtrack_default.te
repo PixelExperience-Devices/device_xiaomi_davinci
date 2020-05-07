@@ -1,0 +1,2 @@
+# Allow hal_memtrack_default to read sysfs_kgsl
+allow hal_memtrack sysfs_kgsl:dir r_dir_perms;

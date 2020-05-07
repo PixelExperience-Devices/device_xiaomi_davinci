@@ -5,3 +5,9 @@ allow init {
 
 # Allow init to mount vendor configs
 allow init vendor_configs_file:dir mounton;
+
+allow init debugfs_sched_features:file write;
+
+allow init debugfs_clk:file write;
+
+allow init sysfs_devfreq:file write;

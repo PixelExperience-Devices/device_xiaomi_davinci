@@ -2,6 +2,8 @@ type xiaomi_settings, domain;
 
 app_domain(xiaomi_settings)
 
+get_prop(xiaomi_settings, vendor_default_prop)
+
 # Access standard system services
 allow xiaomi_settings app_api_service:service_manager find;
 allow xiaomi_settings audioserver_service:service_manager find;

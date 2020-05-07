@@ -1,0 +1,18 @@
+allow untrusted_app_27 proc_net:dir r_dir_perms;
+allow untrusted_app_27 proc_net:file r_file_perms;
+
+allow untrusted_app_27 sysfs_net:dir r_dir_perms;
+allow untrusted_app_27 sysfs_net:file r_file_perms;
+
+allow untrusted_app_27 sysfs_kgsl:dir r_dir_perms;
+allow untrusted_app_27 sysfs_kgsl:file r_file_perms;
+allow untrusted_app_27 sysfs_kgsl:lnk_file r_file_perms;
+
+allow untrusted_app_27 sysfs_devfreq:dir r_dir_perms;
+allow untrusted_app_27 sysfs_devfreq:file r_file_perms;
+
+allow untrusted_app_27 sysfs_usb_supply:dir r_dir_perms;
+allow untrusted_app_27 sysfs_usb_supply:file r_file_perms;
+
+allow untrusted_app_27 sysfs_battery_supply:dir r_dir_perms;
+allow untrusted_app_27 sysfs_battery_supply:file r_file_perms;

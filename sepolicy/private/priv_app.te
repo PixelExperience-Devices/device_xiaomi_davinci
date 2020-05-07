@@ -1,0 +1,2 @@
+allow priv_app sysfs_kgsl:file r_file_perms;
+allow priv_app sysfs_kgsl:dir r_dir_perms;

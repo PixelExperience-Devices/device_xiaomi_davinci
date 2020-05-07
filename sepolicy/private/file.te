@@ -8,11 +8,17 @@ type persist_file, file_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_devfreq, sysfs_type, fs_type;
-type debugfs_sched_features, debugfs_type, fs_type;
 type sysfs_msm_boot, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+type sysfs_battery_supply, sysfs_type, fs_type;
+
+# debugfs
+type debugfs_clk, debugfs_type, fs_type;
+type debugfs_sched_features, debugfs_type, fs_type;
 
 # dev
 type latency_device, dev_type;
+type diag_device, dev_type;
 
 # vendor
 type vendor_firmware_file, vendor_file_type, file_type;

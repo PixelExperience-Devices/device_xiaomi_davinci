@@ -13,6 +13,9 @@ binder_call(hal_fod_davinci, hal_fingerprint)
 # Allow binder communication with hal_touchfeature_xiaomi_default
 binder_call(hal_fod_davinci, hal_touchfeature_xiaomi_default)
 
+add_hwservice(hal_fod_davinci, hal_touchfeature_xiaomi_hwservice)
+allow hal_fod_davinci hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+
 add_hwservice(hal_fod_davinci, hal_fingerprint_hwservice_xiaomi)
 allow hal_fod_davinci hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
 
