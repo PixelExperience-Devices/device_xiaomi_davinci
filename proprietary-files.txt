@@ -115,6 +115,9 @@ product/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 
+# libperfmgr-prebuilt
+vendor/lib64/libperfmgr.so:product/vendor_overlay/29/lib64/libperfmgr.so|9d24caa70bcd36f347a9417ce62b11ead08f608f
+
 # Media
 lib/libFileMux.so
 lib/libmmosal.so
