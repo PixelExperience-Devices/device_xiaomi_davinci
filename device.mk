@@ -119,7 +119,7 @@ PRODUCT_BOOT_JARS += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.davinci
+    android.hardware.light@2.0-impl.davinci
 
 # Media
 PRODUCT_COPY_FILES += \
