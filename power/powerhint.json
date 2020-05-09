@@ -5,15 +5,9 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1708800",
         "1621800",
-        "1497600",
         "1324800",
-        "1248000",
-        "1017600",
-        "768000",
-        "576000",
-        "300000"
+        "1017600"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -23,14 +17,8 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1708800",
-        "1621800",
-        "1497600",
-        "1324800",
         "1248000",
-        "1017600",
         "768000",
-        "576000",
         "300000"
       ],
       "ResetOnInit": true
@@ -40,18 +28,10 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "2169600",
         "1939200",
-        "1843200",
         "1708800",
         "1555200",
-        "1324800",
-        "1209600",
-        "1094400",
-        "979200",
-        "806400",
-        "652800",
-        "300000"
+        "1209600"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -61,17 +41,9 @@
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "2169600",
-        "1939200",
-        "1843200",
-        "1708800",
         "1555200",
-        "1324800",
         "1209600",
-        "1094400",
-        "979200",
         "806400",
-        "652800",
         "300000"
       ],
       "ResetOnInit": true
@@ -80,11 +52,8 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
-        "610000000",
         "565000000",
-        "430000000",
-        "355000000",
-        "267000000"
+        "430000000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -93,7 +62,6 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "610000000",
         "565000000",
         "430000000",
         "355000000",
@@ -358,13 +326,13 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1324800"
+      "Value": "1555200"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "1248000"
+      "Value": "1324800"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -850,7 +818,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "610000000"
+      "Value": "565000000"
     },
     {
       "PowerHint": "TPU_BOOST",
