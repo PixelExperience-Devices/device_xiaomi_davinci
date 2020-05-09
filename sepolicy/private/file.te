@@ -8,13 +8,21 @@ type persist_file, file_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_devfreq, sysfs_type, fs_type;
-type sysfs_msm_boot, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
 type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_npu, sysfs_type, fs_type;
+type sysfs_ufshc, sysfs_type, fs_type;
+type sysfs_msm_power, sysfs_type, fs_type;
+type sysfs_suspend, sysfs_type, fs_type;
+type sysfs_printk, sysfs_type, fs_type;
+type sysfs_stats, sysfs_type, fs_type;
 
 # debugfs
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_sched_features, debugfs_type, fs_type;
+
+# proc
+type proc_sysctl_schedboost, proc_type, fs_type;
 
 # dev
 type latency_device, dev_type;

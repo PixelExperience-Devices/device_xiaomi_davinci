@@ -6,5 +6,5 @@ set_prop(vendor_init, persist_camera_prop)
 
 set_prop(vendor_init, power_prop)
 
-allow vendor_init persist_file:lnk_file read;
-allow vendor_init debugfs_sched_features:file write;
+allow vendor_init persist_file:lnk_file rw_file_perms;
+allow vendor_init debugfs_sched_features:file rw_file_perms;
