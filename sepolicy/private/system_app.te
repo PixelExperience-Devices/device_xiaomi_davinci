@@ -11,3 +11,6 @@ allow system_app {
     open
     read
 };
+
+get_prop(system_app, persist_camera_prop);
+get_prop(system_app, vendor_camera_prop);
