@@ -124,8 +124,6 @@ lib/libmmosal.so
 lib/libmmparser_lite.so
 lib/libOmxMux.so
 lib64/libmmosal.so
--vendor/lib/libplatformconfig.so:lib/libplatformconfig.so
--vendor/lib64/libplatformconfig.so:lib64/libplatformconfig.so
 
 # Popup camera sound effects
 media/audio/ui/popup_cangmen_down.ogg:product/media/audio/ui/popup_cangmen_down.ogg
