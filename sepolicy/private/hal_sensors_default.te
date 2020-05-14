@@ -1,2 +1,0 @@
-# Allow hal_sensors_default to read sysfs_kgsl
-allow hal_sensors diag_device:chr_file rw_file_perms;

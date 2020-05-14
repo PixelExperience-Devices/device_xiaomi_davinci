@@ -25,17 +25,9 @@ binder_call(hal_fod_davinci, hal_displayfeature_xiaomi_default)
 add_hwservice(hal_fod_davinci, hal_displayfeature_xiaomi_hwservice)
 allow hal_fod_davinci hal_displayfeature_xiaomi_hwservice:hwservice_manager find;
 
-# Allow binder communication with platform_app
-binder_call(hal_fod_davinci, platform_app)
-
 # Grant FOD access over the control nodes
-allow hal_fod_davinci {
-    sysfs_graphics
-}:file rw_file_perms;
-
 allow hal_fod_davinci sysfs_graphics:dir search;
-
-set_prop(hal_fod_davinci, sysfs_graphics)
+allow hal_fod_davinci sysfs_graphics:file rw_file_perms;
 
 # Allow to use wakelock
 wakelock_use(hal_fod_davinci)

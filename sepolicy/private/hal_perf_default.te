@@ -1,0 +1,4 @@
+type hal_perf_default, domain;
+
+# Allow hal_perf_default to read sysfs_msm_subsys
+allow hal_perf_default sysfs_msm_subsys:dir { search };

@@ -4,7 +4,14 @@ set_prop(vendor_init, vendor_camera_prop)
 # Allow vendor_init to set persist_camera_prop
 set_prop(vendor_init, persist_camera_prop)
 
+# To get/set powerhal state property
 set_prop(vendor_init, power_prop)
 
+dontaudit vendor_init {
+    system_data_file
+    tombstone_data_file
+}:dir setattr;
+
+allow vendor_init block_device:lnk_file setattr;
 allow vendor_init persist_file:lnk_file rw_file_perms;
 allow vendor_init debugfs_sched_features:file rw_file_perms;
