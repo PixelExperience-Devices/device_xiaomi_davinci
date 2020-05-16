@@ -24,5 +24,5 @@
     <string name="thermal_camera">相机</string>
     <string name="thermal_dialer">电话</string>
     <string name="thermal_gaming">游戏</string>
-    <string name="thermal_youtube">视频</string>
+    <string name="thermal_streaming">视频</string>
 </resources>
