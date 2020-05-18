@@ -3,6 +3,7 @@ allow init vendor_file:file mounton;
 
 # Allow init to mount vendor configs
 allow init vendor_configs_file:dir mounton;
+allow init vendor_configs_file:file mounton;
 
 dontaudit init {
   bt_firmware_file
@@ -13,6 +14,7 @@ allow init {
     persist_file
     debugfs_sched_features
     sysfs_msm_subsys
+    sysfs_msm_power
     sysfs_devfreq
     sysfs_devices_system_cpu
     sysfs_graphics
@@ -22,6 +24,8 @@ allow init {
     sysfs_printk
     sysfs_thermal
     sysfs_suspend
+    sysfs_npu
+    debugfs_clk
 }:{
   file
   lnk_file
