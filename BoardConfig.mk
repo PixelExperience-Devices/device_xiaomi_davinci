@@ -113,6 +113,11 @@ BOARD_HAVE_QCOM_FM := true
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
+ODM_MANIFEST_SKUS += \
+    davinciin
+
+ODM_MANIFEST_DAVINCIIN_FILES := $(DEVICE_PATH)/manifest_davinciin.xml
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_davinci
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/

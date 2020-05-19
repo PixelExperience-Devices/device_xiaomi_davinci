@@ -48,6 +48,7 @@ void load_davinciin() {
     property_override("ro.product.device", "davinciin");
     property_override("ro.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
     property_override("ro.product.mod_device", "davinciin_in_global");
+    property_override("ro.boot.product.hardware.sku", "davinciin");
 }
 
 void load_davinci() {
