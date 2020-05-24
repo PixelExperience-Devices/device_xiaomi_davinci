@@ -123,7 +123,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.VT_CAM_INTERFACE=1 \
     telephony.lteOnCdmaDevice=1 \
     persist.vendor.radio.data_con_rprt=1 \
-    persist.vendor.radio.report_codec=1
+    persist.vendor.radio.report_codec=1 \
+    persist.vendor.radio.aosp_usr_pref_sel=true
 
 # RCS
 PRODUCT_PROPERTY_OVERRIDES += \
