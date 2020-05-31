@@ -85,13 +85,6 @@ TARGET_USES_PREBUILT_CAMERA_SERVICE := true
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Dex
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
-  endif
-endif
-
 # Display
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
