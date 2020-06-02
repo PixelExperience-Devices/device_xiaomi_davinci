@@ -38,7 +38,7 @@ void load_davinciglobal() {
     property_override("ro.product.model", "Mi 9T");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
-    property_override("ro.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
+    property_override("ro.build.fingerprint", "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys");
     property_override("ro.product.mod_device", "davinci_global");
 }
 
@@ -46,7 +46,7 @@ void load_davinciin() {
     property_override("ro.product.model", "Redmi K20");
     property_override("ro.build.product", "davinciin");
     property_override("ro.product.device", "davinciin");
-    property_override("ro.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
+    property_override("ro.build.fingerprint", "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys");
     property_override("ro.product.mod_device", "davinciin_in_global");
     property_override("ro.boot.product.hardware.sku", "davinciin");
 }
@@ -55,7 +55,7 @@ void load_davinci() {
     property_override("ro.product.model", "Redmi K20");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
-    property_override("ro.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
+    property_override("ro.build.fingerprint", "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys");
 }
 
 void vendor_load_properties() {
