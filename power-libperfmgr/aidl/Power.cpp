@@ -30,8 +30,6 @@
 #include <utils/Log.h>
 #include <utils/Trace.h>
 
-#include "disp-power/display-helper.h"
-
 namespace aidl {
 namespace google {
 namespace hardware {
@@ -90,15 +88,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     ATRACE_INT(toString(type).c_str(), enabled);
     switch (type) {
         case Mode::LOW_POWER:
-            if (enabled) {
-                // Device in battery saver mode, enable display low power mode
-                set_display_lpm(true);
-                mHintManager->DoHint(toString(type));
-            } else {
-                // Device exiting battery saver mode, disable display low power mode
-                set_display_lpm(false);
-                mHintManager->EndHint(toString(type));
-            }
             break;
         case Mode::SUSTAINED_PERFORMANCE:
             if (enabled && !mSustainedPerfModeOn) {
