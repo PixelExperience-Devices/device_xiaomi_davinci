@@ -20,4 +20,4 @@
 /dev/block/bootdevice/by-name/vendor         /vendor                 ext4    ro,barrier=1                                                                                      wait,recoveryonly
 /dev/block/zram0                             none                    swap    defaults                                                                                          zramsize=3221225472,max_comp_streams=8
 
-/devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*    /storage/usbotg    vfat    nosuid,nodev    wait,voldmanaged=usbotg:auto
+/devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*    auto        auto    defaults    wait,voldmanaged=usbotg:auto
