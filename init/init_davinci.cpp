@@ -38,7 +38,7 @@ void load_davinci_global() {
     property_override("ro.product.mod_device", "davinci_global");
     property_override("ro.com.google.clientidbase", "android-xiaomi");
     property_override("ro.com.google.clientidbase.ms", "android-xiaomi-rev1");
-    property_override("ro.boot.product.hardware.sku", "davinci_global");
+    property_override("ro.boot.product.hardware.sku", "davinci");
 }
 
 void load_davinciin() {
@@ -54,7 +54,7 @@ void load_davinci_china() {
     property_override("ro.product.model", "Redmi K20");
     property_override("ro.build.product", "davinci");
     property_override("ro.product.device", "davinci");
-    property_override("ro.boot.product.hardware.sku", "davinci_china");
+    property_override("ro.boot.product.hardware.sku", "davinci");
 }
 
 void vendor_load_properties() {

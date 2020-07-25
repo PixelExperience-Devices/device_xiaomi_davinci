@@ -128,6 +128,8 @@ TARGET_USES_FOD_ZPOS := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/c2_manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+ODM_MANIFEST_SKUS += davinci
+ODM_MANIFEST_DAVINCI_FILES := $(DEVICE_PATH)/nfc-manifest.xml
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
