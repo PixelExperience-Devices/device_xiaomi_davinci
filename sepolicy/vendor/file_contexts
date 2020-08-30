@@ -18,6 +18,7 @@
 # HALs
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.davinci                                          u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.power-service\.davinci-libperfmgr                                    u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.davinci                                   u:object_r:hal_power_stats_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.davinci                 u:object_r:hal_lineage_fod_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                                     u:object_r:hal_touchfeature_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1\.0-service                                            u:object_r:hal_motor_default_exec:s0
