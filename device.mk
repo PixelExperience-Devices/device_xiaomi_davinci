@@ -31,7 +31,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/davinci/davinci-vendor.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Hardware
 PRODUCT_COPY_FILES += \
@@ -357,10 +359,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power/config/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+     android.hardware.power-service.davinci-libperfmgr
 
 # QMI
 PRODUCT_PACKAGES += \

@@ -391,25 +391,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.iop</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IIop</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <version>2.2</version>
-        <interface>
-            <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.2::IPerf/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
