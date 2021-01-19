@@ -6,16 +6,15 @@
 
 android_app {
     name: "XiaomiDoze",
+    defaults: [
+        "SettingsLibDefaults",
+    ],
 
     srcs: ["src/**/*.java"],
 
     certificate: "platform",
     platform_apis: true,
     privileged: true,
-
-    static_libs: [
-        "org.lineageos.settings.resources",
-    ],
 
     optimize: {
         proguard_flags_files: ["proguard.flags"],

@@ -15,9 +15,45 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Device specific settings -->
+    <string name="device_settings_app_name">Advanced settings</string>
+
     <!-- Ambient settings -->
+    <string name="ambient_display_title">Ambient display</string>
     <string name="ambient_enable">Use ambient display</string>
+    <string name="ambient_display_always_on_title">Always on</string>
+    <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
+    <string name="ambient_display_gestures_title">Ambient display gestures</string>
 
     <string name="doze_brightness_title">Always on brightness</string>
     <string name="doze_brightness_summary">%s mode is enabled</string>
+
+    <!-- Pickup sensor -->
+    <string name="pickup_sensor_title">Pickup sensor</string>
+
+    <!-- Proximity sensor -->
+    <string name="proximity_sensor_title">Proximity sensor</string>
+
+    <!-- Hand wave gesture -->
+    <string name="hand_wave_gesture_title">Hand wave</string>
+    <string name="hand_wave_gesture_summary">Pulse notifications on hand wave</string>
+
+    <!-- Pick-up gesture -->
+    <string name="pick_up_gesture_title">Pick-up</string>
+    <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
+
+    <!-- Pocket gesture -->
+    <string name="pocket_gesture_title">Pocket</string>
+    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
+
+    <!-- Wake on gesture -->
+    <string name="wake_on_gesture_title">Wake up on gestures</string>
+    <string name="wake_on_gesture_summary">Wake the device instead of pulsing notifications on gesture events</string>
+
+    <!-- Dialog texts -->
+    <string name="dialog_ok">OK</string>
+
+    <!-- Help texts -->
+    <string name="doze_settings_help_title">Help</string>
+    <string name="doze_settings_help_text">These features use sensor events to launch a doze notification pulse. The chosen sensor is only enabled when the device receives a notification, this helps to reduce battery usage. There is also an option to enable the chosen sensor as soon as the screen turns off, this will cause higher battery usage.</string>
 </resources>

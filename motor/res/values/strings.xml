@@ -15,6 +15,12 @@
      limitations under the License.
 -->
 <resources>
+    <!-- DO NOT TRANSLATE Empty summary for dynamic preferences -->
+    <string name="summary_empty" translatable="false"></string>
+
+    <!-- Device specific settings -->
+    <string name="device_settings_app_name">Advanced settings</string>
+
     <!-- Popup camera settings -->
     <string name="popup_title">Front camera settings</string>
     <string name="popup_led_title">Camera LED</string>
@@ -30,6 +36,7 @@
     <string name="popup_calibration_summary">Calibrate the popup camera motor</string>
     <string name="popup_calibration_warning_title">Motor calibration</string>
     <string name="popup_calibration_warning_text">Unnecessary use of calibration may cause permanent damage. It is recommended to calibrate the popup camera motor only in case of it not moving properly or it being in incorrect position!</string>
+    <string name="action_none">Disable</string>
 
     <!-- Popup camera strings -->
     <string name="popup_camera_tip">Warning</string>
