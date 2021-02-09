@@ -733,7 +733,6 @@ vendor/lib/libsn100u_fw.so
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 vendor/lib64/libqti-perfd-client.so
-vendor/lib64/vendor.qti.hardware.perf@2.2.so
 
 # Peripheral
 vendor/bin/pm-proxy
