@@ -179,10 +179,11 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
-# Enable blurs
+# Blur
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1 \
-    ro.sf.blurs_are_expensive=1
+    ro.sf.blurs_are_expensive=1 \
+    persist.sys.sf.disable_blurs=1
 
 # Fingerprint
 PRODUCT_PACKAGES += \
