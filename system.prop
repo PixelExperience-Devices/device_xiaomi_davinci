@@ -24,10 +24,6 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 
 # Google keyboard
 ro.com.google.ime.height_ratio=1.1
-ro.com.google.ime.kb_pad_port_l=7
-ro.com.google.ime.kb_pad_port_r=7
-ro.com.google.ime.kb_pad_land_l=14
-ro.com.google.ime.kb_pad_land_r=14
 
 # Graphics
 ro.surface_flinger.has_wide_color_display=true
