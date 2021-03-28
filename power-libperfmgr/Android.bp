@@ -14,7 +14,7 @@
 // limitations under the License.
 
 cc_library {
-    name: "libdisppower-pixel",
+    name: "libdisppower",
     proprietary: true,
     srcs: [
         "disp-power/InteractionHandler.cpp",
@@ -29,10 +29,10 @@ cc_library {
 }
 
 cc_binary {
-    name: "android.hardware.power-service.pixel-libperfmgr",
+    name: "android.hardware.power-service.davinci-libperfmgr",
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.power-service.pixel-libperfmgr.rc"],
-    vintf_fragments: ["aidl/android.hardware.power-service.pixel.xml"],
+    init_rc: ["aidl/android.hardware.power-service.davinci-libperfmgr.rc"],
+    vintf_fragments: ["aidl/android.hardware.power-service.davinci.xml"],
     vendor: true,
     shared_libs: [
         "android.hardware.power-ndk_platform",
@@ -41,7 +41,7 @@ cc_binary {
         "liblog",
         "libutils",
         "libbinder_ndk",
-        "libdisppower-pixel",
+        "libdisppower",
         "libperfmgr",
         "pixel-power-ext-ndk_platform",
     ],

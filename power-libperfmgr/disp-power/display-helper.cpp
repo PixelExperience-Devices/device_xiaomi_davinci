@@ -15,7 +15,7 @@
  */
 
 #define LOG_NIDEBUG 0
-#define LOG_TAG "android.hardware.power@-service.pixel-libperfmgr"
+#define LOG_TAG "android.hardware.power@-service.davinci-libperfmgr"
 
 #include <dlfcn.h>
 #include <errno.h>
