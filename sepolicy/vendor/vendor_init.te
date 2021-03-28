@@ -4,3 +4,7 @@ set_prop(vendor_init, vendor_persist_camera_prop)
 
 # Allow init to read last_kmsg file
 allow init proc_last_kmsg:file { r_file_perms setattr };
+
+# Power HAL
+allow vendor_init proc_sched_energy_aware:file w_file_perms;
+set_prop(vendor_init, power_prop)

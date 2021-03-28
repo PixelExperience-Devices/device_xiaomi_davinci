@@ -1,2 +1,6 @@
 # Last kmsg
 type proc_last_kmsg, fs_type, proc_type;
+
+# Power HAL
+type proc_sched_energy_aware, proc_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
