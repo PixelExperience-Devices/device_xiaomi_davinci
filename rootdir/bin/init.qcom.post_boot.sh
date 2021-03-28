@@ -3410,49 +3410,22 @@ case "$target" in
         case "$soc_id" in
             "365" | "366" )
 
-            # Core control parameters on silver
-            echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-            echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
-            echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-            echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-            echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-            echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
-            echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
-            echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
-
             # Setting b.L scheduler parameters
             # default sched up and down migrate values are 71 and 65
             echo 65 > /proc/sys/kernel/sched_downmigrate
             echo 71 > /proc/sys/kernel/sched_upmigrate
-            # default sched up and down migrate values are 100 and 95
-            echo 85 > /proc/sys/kernel/sched_group_downmigrate
-            echo 100 > /proc/sys/kernel/sched_group_upmigrate
-            echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
-
-            #colocation v3 settings
-            echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
 
             # configure governor settings for little cluster
             echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-            echo 1248000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
+            echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
+            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
             echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
             # configure governor settings for big cluster
             echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-            echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-            echo 1324600 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
+            echo 500 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
+            echo 20000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
             echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-
-            # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-            echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-            echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
-
-            echo "0:1248000" > /sys/module/cpu_boost/parameters/input_boost_freq
-            echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
             # Set Memory parameters
             configure_memory_parameters
@@ -3513,11 +3486,10 @@ case "$target" in
             setprop vendor.dcvs.prop 1
 
             # cpuset parameters
-                echo 0-5 > /dev/cpuset/background/cpus
-                echo 0-5 > /dev/cpuset/system-background/cpus
-
-                # Turn off scheduler boost at the end
-                echo 0 > /proc/sys/kernel/sched_boost
+            echo 0-5,7 > /dev/cpuset/foreground/cpus
+            echo 4-5 > /dev/cpuset/background/cpus
+            echo 2-5 > /dev/cpuset/system-background/cpus
+            echo 2-5 > /dev/cpuset/restricted/cpus
 
                 # Turn on sleep modes.
                 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
