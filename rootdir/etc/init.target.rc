@@ -27,6 +27,7 @@
 #
 #
 
+import /vendor/etc/init/init.batterysecret.rc
 import /vendor/etc/init/init.mi_thermald.rc
 
 on early-init
