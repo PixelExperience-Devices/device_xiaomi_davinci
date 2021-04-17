@@ -475,8 +475,6 @@
     <ctl name="Mi_Ultrasound ReportNone" value="0"/>
     <!-- for mius end -->
 
-    <ctl name="TFA Profile" value="powerdown" />
-
     <path name="deep-buffer-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
@@ -599,9 +597,6 @@
     </path>
 
     <path name="ultrasound-proximity-output speaker">
-    </path>
-
-    <path name="ultrasound-proximity-output speaker-and-headphones">
     </path>
 
     <path name="ultrasound-proximity-input">
@@ -3203,10 +3198,6 @@
         <ctl name="RX HPH Mode" value="CLS_H_HIFI" />
     </path>
 
-    <path name="headphones-hifi-filter">
-        <path name="headphones" />
-    </path>
-
     <path name="hph-highquality-mode">
         <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
         <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
@@ -3278,11 +3269,6 @@
 
     <path name="voice-headset-mic">
         <path name="headset-mic" />
-    </path>
-
-    <path name="speaker-and-headphones-hifi-filter">
-        <path name="headphones" />
-        <path name="speaker" />
     </path>
 
     <path name="speaker-and-headphones">

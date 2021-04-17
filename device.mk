@@ -207,23 +207,6 @@ PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
 # GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti:64 \
-    android.hardware.gnss@2.1-service-qti \
-    libbatching \
-    libgeofencing \
-    libgnss \
-    libsensorndkbridge
-
-PRODUCT_PACKAGES += \
-    flp.conf \
-    gnss_antenna_info.conf \
-    gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf \
-    xtwifi.conf
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
@@ -264,10 +247,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.early_boot.sh \
-    init.qcom.sensors.sh \
     init.qcom.usb.sh \
     init.qcom.post_boot.sh \
-    init.davinci.rc \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.qcom.sh \

@@ -1,1 +1,2 @@
+binder_call(rild, priv_app)
 dontaudit rild default_prop:file { read };
