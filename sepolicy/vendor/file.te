@@ -1,6 +1,3 @@
-# Last kmsg
-type proc_last_kmsg, fs_type, proc_type;
-
 # Persist subsystem
 type persist_subsys_file, vendor_persist_type, file_type;
 
