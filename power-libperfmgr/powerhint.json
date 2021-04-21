@@ -393,7 +393,7 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHistMemory",
-      "Duration": 5000,
+      "Duration": 2000,
       "Value": "0"
     },
     {
