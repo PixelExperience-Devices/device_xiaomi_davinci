@@ -1,2 +1,4 @@
 r_dir_file(vendor_adsprpcd sysfs_graphics)
 r_dir_file(vendor_adsprpcd sysfs)
+
+allow vendor_adsprpcd sysfs_msm_subsys:file { read open getattr };
