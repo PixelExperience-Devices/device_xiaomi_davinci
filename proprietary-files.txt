@@ -665,7 +665,9 @@ vendor/lib64/libllvm-qcom.so
 vendor/lib64/libpvr.so
 
 # IRQ Balancer
-vendor/bin/msm_irqbalance
+vendor/bin/msm_irqbalance|806c364ba0612b9607fd9dd4e5552c51f0d4f6de
+
+# IRQ Balancer - config
 vendor/etc/msm_irqbalance.conf
 
 # Keymaster
