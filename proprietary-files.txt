@@ -49,7 +49,6 @@ vendor/lib/rfsa/adsp/misound_res.bin
 
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
-vendor/lib64/com.dsi.ant@1.0.so
 
 # Audio
 vendor/lib/liba2dpoffload.so
