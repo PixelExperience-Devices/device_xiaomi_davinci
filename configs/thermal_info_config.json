@@ -194,56 +194,6 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":0.001
-        },
-        {
-            "Name":"skin-therm-monitor",
-            "Type":"SKIN",
-            "HotThreshold":[
-                "NAN",
-                43.0,
-                45.0,
-                48.0,
-                50.0,
-                54.0,
-                58.0
-            ],
-            "HotHysteresis":[
-                0.0,
-                1.9,
-                1.9,
-                1.9,
-                1.9,
-                1.9,
-                1.9
-            ],
-            "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":true
-        },
-	{
-            "Name":"usbc-therm-monitor",
-            "Type":"USB_PORT",
-            "HotThreshold":[
-                "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                "70.0",
-                "NAN"
-            ],
-            "HotHysteresis":[
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                5.0,
-                0.0
-            ],
-            "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":true
         }
     ],
     "CoolingDevices":[
@@ -260,7 +210,7 @@
             "Type":"GPU"
         },
         {
-            "Name":"fcc",
+            "Name":"battery",
             "Type":"BATTERY"
         }
     ]
