@@ -1,14 +1,7 @@
 # Bluetooth
 vendor.bluetooth.soc=cherokee
-ro.bluetooth.library_name=libbluetooth_qti.so
-persist.vendor.bt.a2dp.aac_whitelist=false
-persist.vendor.btstack.enable.splita2dp=true
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
 persist.vendor.btstack.enable.twsplus=true
-persist.vendor.btstack.connect.peer_earbud=true
 persist.vendor.btstack.enable.twsplussho=true
-ro.bluetooth.emb_wp_mode=false
-ro.bluetooth.wipower=false
 
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCamera
