@@ -1,3 +1,7 @@
+type proc_sched_energy_aware, proc_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type latency_device, dev_type;
+
 # Allow hal_power_default to write to dt2w nodes
 allow hal_power_default input_device:dir r_dir_perms;
 allow hal_power_default input_device:chr_file rw_file_perms;

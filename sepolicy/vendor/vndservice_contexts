@@ -1,3 +1,4 @@
+# Remosaic Daemon
 android.IRemosaicDaemon                        u:object_r:remosaic_daemon_service:s0
 
 # PowerStats HAL

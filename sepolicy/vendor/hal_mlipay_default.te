@@ -1,3 +1,4 @@
+type hal_mlipay_hwservice, hwservice_manager_type;
 hal_server_domain(hal_mlipay_default, hal_mlipay)
 
 init_daemon_domain(hal_mlipay_default)

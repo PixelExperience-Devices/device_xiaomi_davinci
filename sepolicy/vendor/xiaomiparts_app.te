@@ -1,0 +1,29 @@
+type xiaomiparts_app, domain;
+
+app_domain(xiaomiparts_app)
+
+hal_client_domain(xiaomiparts_app, hal_motor)
+
+# Access standard system services
+allow xiaomiparts_app app_api_service:service_manager find;
+allow xiaomiparts_app audioserver_service:service_manager find;
+allow xiaomiparts_app cameraserver_service:service_manager find;
+allow xiaomiparts_app drmserver_service:service_manager find;
+allow xiaomiparts_app mediaextractor_service:service_manager find;
+allow xiaomiparts_app mediaserver_service:service_manager find;
+allow xiaomiparts_app mediametrics_service:service_manager find;
+
+# Allow parts read and write /data/data subdirectory
+allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
+allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
+
+allow xiaomiparts_app {
+    sysfs_leds
+    vendor_sysfs_graphics
+}:dir search;
+
+allow xiaomiparts_app {
+    cgroup
+    sysfs_leds
+    vendor_sysfs_graphics
+}:file rw_file_perms;

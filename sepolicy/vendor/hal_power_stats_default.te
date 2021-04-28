@@ -1,3 +1,8 @@
+type sysfs_iio_devices, fs_type, sysfs_type;
+type sysfs_msm_wlan, sysfs_type, fs_type;
+type sysfs_power_stats, sysfs_type, fs_type;
+type sysfs_power_stats_ignore, sysfs_type, fs_type;
+
 allow hal_power_stats_default sysfs_msm_wlan:dir search; # Needed to traverse to wlan stats file
 get_prop(hal_power_stats_default, exported_wifi_prop) # Needed to detect wifi on/off
 r_dir_file(hal_power_stats_default, sysfs_iio_devices) # Needed to traverse odpm files

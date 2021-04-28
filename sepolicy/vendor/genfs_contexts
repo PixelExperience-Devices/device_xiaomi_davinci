@@ -1,3 +1,4 @@
+# Wakeup
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup                                                                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-0/0-0028/wakeup                                                                                                                  u:object_r:sysfs_wakeup:s0
