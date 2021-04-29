@@ -554,6 +554,7 @@ vendor/lib64/vendor.qti.data.factory@2.1.so
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 vendor/lib64/hw/fingerprint.goodix_fod.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so

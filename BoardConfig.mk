@@ -123,14 +123,14 @@ TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.davinci
 TARGET_USES_FOD_ZPOS := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/c2_manifest.xml
-ODM_MANIFEST_FILES += $(DEVICE_PATH)/manifest-qva.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/c2_manifest.xml
+ODM_MANIFEST_FILES += $(DEVICE_PATH)/vintf/manifest-qva.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += davinci
 ODM_MANIFEST_DAVINCI_FILES := \
-    $(DEVICE_PATH)/nfc-manifest.xml \
-    $(DEVICE_PATH)/manifest-qva.xml
+    $(DEVICE_PATH)/vintf/nfc-manifest.xml \
+    $(DEVICE_PATH)/vintf/manifest-qva.xml
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
