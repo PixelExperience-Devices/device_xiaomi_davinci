@@ -73,6 +73,7 @@ vendor/lib/libspkrprot.so
 vendor/lib/libtinycompress.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
+vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 
 # Audio - SoundFX
@@ -335,6 +336,7 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libSNPE.so
 vendor/lib64/libSuperSensor.so
 vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libswregistrationalgo.so
@@ -628,6 +630,7 @@ vendor/lib/libgnsspps.so
 vendor/lib/libgps.utils.so
 vendor/lib/libizat_client_api.so
 vendor/lib/libizat_core.so
+vendor/lib/libjnihelper.so
 vendor/lib/liblbs_core.so
 vendor/lib/libloc_api_v02.so
 vendor/lib/libloc_core.so
@@ -665,6 +668,7 @@ vendor/lib64/libgnsspps.so
 vendor/lib64/libgps.utils.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
+vendor/lib64/libjnihelper.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_core.so
 vendor/lib64/libloc_api_v02.so
@@ -688,6 +692,7 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # Gatekeeper
@@ -835,6 +840,25 @@ vendor/lib/unnhal-acc-hta.so
 vendor/lib64/libhta_hexagon_runtime.so
 vendor/lib64/libnpu.so
 vendor/lib64/unnhal-acc-hta.so
+
+# NXP - ESEPowermanager
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/etc/libese-nxp.conf
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/libchrome.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
+
+# NXP - SecureElement
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/jcos_nq_client.so
+vendor/lib64/ls_nq_client.so
+vendor/lib64/se_nq_extn_client.so
 
 # Peripheral
 vendor/bin/pm-proxy
@@ -1034,6 +1058,16 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+
+# SCVE
+vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvdsp_stub.so
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectSegmentation_stub.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscveObjectTracker_stub.so
 
 # Sensor - configs
 vendor/etc/sensors/config/adux1050_0.json
