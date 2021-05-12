@@ -130,22 +130,8 @@ vendor/lib/btaudio_offload_if.so
 # Bluetooth - Configstore
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so
-vendor/lib/vendor.qti.hardware.btconfigstore@2.0.so
-
-# Bluetooth - aptX - from sunfish RQ2A.210405.005
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-
-# Bluetooth - Avoidance - from sunfish RQ2A.210405.005
-vendor/lib/hw/vendor.qti.hardware.bt_channel_avoidance@1.0-impl.so|f12ac532c61f8473160fa820f958ff3744a3acdf
-vendor/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so|692f278bea50c74dbd4ce750f2d2f51849b65611
-vendor/lib64/hw/vendor.qti.hardware.bt_channel_avoidance@1.0-impl.so|835f15e56a24a3b516efde469cbc999f6b32abc2
-vendor/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so|e7cd1a82ac6d77581a4f773ccef16aa74188abf7
 
 # CDSP
 vendor/bin/cdsprpcd
