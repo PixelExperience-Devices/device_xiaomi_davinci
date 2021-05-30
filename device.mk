@@ -269,6 +269,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS := kernel/xiaomi/davinci-headers/kernel-headers
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.davinci
