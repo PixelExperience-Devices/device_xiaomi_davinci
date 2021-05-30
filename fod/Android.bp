@@ -44,6 +44,6 @@ cc_library_static {
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"
     ],
     header_libs: [
-        "generated_kernel_headers",
+        "device_kernel_headers",
     ],
 }

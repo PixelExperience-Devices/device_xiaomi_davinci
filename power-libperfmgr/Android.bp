@@ -52,6 +52,6 @@ cc_binary {
     ],
 	header_libs: [
         "libhardware_headers",
-        "generated_kernel_headers",
+        "device_kernel_headers",
     ],
 }
