@@ -1,6 +1,6 @@
 #
 # All unpinned blobs here are extracted from 
-# miui_DAVINCI_21.4.7_8bfecd2bec_11.0
+# davinci-user-11-RKQ1.200826.002-V12.1.2.0.RFJMIXM
 #
 
 # ADSP
@@ -456,21 +456,31 @@ vendor/bin/qseecom_sample_client
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/lib/libbase64.so
+vendor/lib/libcppf.so
+vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/librmp.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
+vendor/lib64/libbase64.so
 vendor/lib64/libcpion.so
+vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libminkdescriptor.so
+vendor/lib64/libminksocket.so
 vendor/lib64/libops.so
+vendor/lib64/liboemcrypto.so
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
+vendor/lib64/librmp.so
 vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
@@ -478,25 +488,16 @@ vendor/lib64/libSecureUILib.so
 vendor/lib64/libsi.so
 vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
+vendor/lib64/libtrustedapploader.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 
-# DRM - widevine
+# DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib/libbase64.so
-vendor/lib/libcppf.so
-vendor/lib/libdrmfs.so
-vendor/lib/librmp.so
-vendor/lib64/libbase64.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/librmp.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
-
-# DRM - OemCrypto
-vendor/lib64/liboemcrypto.so
 
 # Display - Hardware - from LA.UM.9.1.r1-07300-SMxxx0
 vendor/lib64/libdisp-aba.so|b7c8567c3079372479c85834ba1aab4e2eee5522
@@ -513,10 +514,8 @@ vendor/lib64/libtinyxml.so|1fc14ef18aa90ddf62e7ced53da91d1bc264e47b
 vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Display - calibration - from davinci-user-10-QKQ1.190825.002-V12.0.2.0.QFJMIXM
-vendor/etc/hdr_config.cfg|14bd7906643998c6b6bb51be5f20007232eaccc3
 vendor/etc/qdcm_calib_data_ss_ea_fhd_cmd_dsi_panel.xml|4c8c166bba6ef7de86d7ab3c722dc7afc8e18a8d
 vendor/etc/qdcm_calib_data_ss_eb_fhd_cmd_dsi_panel.xml|9592ec2725e2be9b43a13d7ba87ef2a10ba5e249
-vendor/etc/sdr_config.cfg|4e0901a44be67f92b747e2c34d13f8858f9cc010
 
 # Display - Postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -866,7 +865,6 @@ vendor/bin/pd-mapper
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libminkdescriptor.so
 vendor/lib/libnative-api.so
 vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
@@ -879,7 +877,6 @@ vendor/lib/libqmi_encdec.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
-vendor/lib64/libminkdescriptor.so
 vendor/lib64/libnative-api.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
