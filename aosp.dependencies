@@ -2,13 +2,13 @@
   { 
       "repository"   : "vendor_xiaomi_davinci",
       "target_path"  : "vendor/xiaomi/davinci",
-      "branch"       : "eleven",
+      "branch"       : "eleven-wip",
       "remote"       : "pixel-devices-blobs"
   },
   { 
       "repository"   : "kernel_xiaomi_davinci",
       "target_path"  : "kernel/xiaomi/davinci",
-      "branch"       : "eleven"
+      "branch"       : "eleven-wip"
   },
   { 
       "repository"   : "kernel_xiaomi_davinci-headers",
