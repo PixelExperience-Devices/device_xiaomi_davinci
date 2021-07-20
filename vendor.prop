@@ -119,7 +119,6 @@ ro.soc.manufacturer=QTI
 # Data modules
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
-ro.telephony.iwlan_operation_mode=legacy
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
