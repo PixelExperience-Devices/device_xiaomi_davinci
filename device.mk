@@ -228,7 +228,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.rc
+    ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
