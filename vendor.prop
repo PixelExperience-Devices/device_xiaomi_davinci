@@ -131,7 +131,6 @@ persist.vendor.data.mode=concurrent
 persist.vendor.dpmhalservice.enable=1
 
 # Display
-debug.sf.disable_backpressure=1
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=15666666
 debug.sf.late.app.duration=16666666
