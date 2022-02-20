@@ -835,7 +835,6 @@ vendor/etc/sensors/config/sns_tilt.json|3626d047e33e03f8c2f6735420fa53a74cc79ea4
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json|5226c5ad549737e40c50f8d0292bddfe938c2378
 vendor/etc/sensors/config/sns_tilt_to_wake.json|b71553fa41fa7a9519a5d03b7a2d38506f137e91
 vendor/etc/sensors/config/tcs3701.json|8d29c45995d2fa7ed1d01aeeb3a5be3db2a1725c
-vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
 vendor/etc/sensors/sns_reg_config|891e6e552b64c29b61744dd53ea373ea0ce0aa40
 
 # Soter
