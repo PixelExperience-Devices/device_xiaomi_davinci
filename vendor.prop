@@ -125,8 +125,6 @@ persist.vendor.data.mode=concurrent
 persist.vendor.dpmhalservice.enable=1
 
 # Display
-debug.egl.hw=0
-debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=15666666
@@ -136,7 +134,6 @@ debug.sf.early.app.duration=16666666
 debug.sf.earlyGl.sf.duration=15666666
 debug.sf.earlyGl.app.duration=16666666
 debug.sf.enable_hwc_vds=1
-debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
