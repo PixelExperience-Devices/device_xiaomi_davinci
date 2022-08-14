@@ -1,0 +1,20 @@
+[
+  {
+    "repository" : "Ad1tyaS1ngh/vendor_xiaomi_davinci",
+    "target_path": "vendor/xiaomi/davinci",
+    "branch": "T",
+    "remote": "github"
+  },
+  {
+    "repository": "Ad1tyaS1ngh/kernel_xiaomi_sm6150",
+    "target_path": "kernel/xiaomi/sm6150",
+    "branch":"T",
+    "remote":"github"
+  },
+  {
+    "repository": "Ad1tyaS1ngh/hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "T",
+    "remote": "github"
+  }
+]
