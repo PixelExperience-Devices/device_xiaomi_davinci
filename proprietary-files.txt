@@ -271,7 +271,7 @@ vendor/etc/camera/mibokeh_712_opencl.bin|6de555566a352263463dac79412c465c7930b46
 vendor/etc/camera/mibokeh_712_parameter.bin|2cd2aebdb2dc3789a72698faf6f6c4bcbfe99fd2
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin|1ca031d5f8eb0e6aa3eedf7df8d53223b5054bc5
 -vendor/lib64/camera/components/com.mi.node.aiasd.so|e29b9f970dbac330dcf08d83494e9c9066a25ec3
--vendor/lib64/camera/components/com.qti.node.watermark.so|27c439f82bf57e619d1478ce91c52209f99b28ba
+-vendor/lib64/camera/components/com.qti.node.watermark.so|bcf6927049c7b347497565b3c9c342aeac016439
 -vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so|0cf37592869cd6e00792aef10e7530ef669df9c6
 -vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so|0147adfc0c2cb18307ac24e0b23239c36b2d1ca8
 -vendor/lib64/camera/components/com.xiaomi.node.mifragment.so|938c5846f2cbc94f88a8e42a21e2cba995fe3fb7
