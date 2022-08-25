@@ -62,7 +62,7 @@ on init
     write /proc/sys/vm/page-cluster 0
 
 on fs
-    mount_all --early /vendor/etc/fstab.qcom
+    mount_all /vendor/etc/fstab.qcom --early
 
     exec u:r:vendor_toolbox:s0 root audio bluetooth graphics media net_raw system vendor_rfs vendor_rfs_shared -- /vendor/bin/toybox_vendor find /mnt/vendor/persist -type d -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
     restorecon_recursive /mnt/vendor/persist
@@ -73,7 +73,7 @@ on fs
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
-    mount_all --late /vendor/etc/fstab.qcom
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
@@ -118,7 +118,7 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/swappiness 100
 
     # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.zram
+    swapon_all /vendor/etc/fstab.qcom
 
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
