@@ -173,10 +173,6 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
@@ -224,17 +220,20 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
-# Init scripts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.davinci.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.davinci.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.davinci.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.rc
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/bin/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.qti.early_init.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.early_init.sh
+PRODUCT_PACKAGES += \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.early_init.sh
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -353,9 +352,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
@@ -399,10 +395,6 @@ PRODUCT_COPY_FILES += \
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
-# Uevent
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
 # USB
 PRODUCT_PACKAGES += \
