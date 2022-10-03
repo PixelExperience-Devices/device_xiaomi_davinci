@@ -346,10 +346,6 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
