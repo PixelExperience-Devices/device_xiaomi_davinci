@@ -56,7 +56,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib64/camera/components/com.qti.node.watermark.so)
-            ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
+            grep -q "libpiex_shim.so" "${2}" || ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/lib64/hw/camera.qcom.so | vendor/lib64/libFaceDetectpp-0.5.2.so | vendor/lib64/libfacedet.so)
             sed -i "s|libmegface.so|libfacedet.so|g" "${2}"
