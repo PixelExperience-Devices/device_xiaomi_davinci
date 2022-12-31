@@ -433,6 +433,9 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libwpa_client \
     WifiOverlay \
+    WifiOverlayCN \
+    WifiOverlayGLOBAL \
+    WifiOverlayINDIA \
     wpa_supplicant \
     wpa_supplicant.conf
 
