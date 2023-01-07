@@ -245,7 +245,7 @@ vendor/etc/camera/eyelineblush.cng|f85c3388ab3112ad8963e004c47b131e5d567cca
 -vendor/lib64/libarcsoft_portrait_lighting_c.so|ca42fa6fc25e231ca70e1caf80a08b18ccfd3d99
 -vendor/lib64/libarcsoft_preview_deflicker.so|6f1da5473c0b79e99da1d2ea27db736f06931774
 -vendor/lib64/libarcsoft_supernight.so|1ddb832870a9db8bb99a0b2d9eb968565f2ee83f
--vendor/lib64/libmpbase.so|8b4133e220f01f5e4e411ce9fc779c00bbd31d54
+-vendor/lib64/libmpbase.so;MODULE=libmpbase_vendor|8b4133e220f01f5e4e411ce9fc779c00bbd31d54
 -vendor/lib64/libtriplecam_video_optical_zoom.so|d06d62a3f9ad5c9330b52d55247f8d68369a6f43
 
 # Camera face detection - from davinci V12.5.2.0.RFJCNXM
