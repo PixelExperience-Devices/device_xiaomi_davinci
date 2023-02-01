@@ -868,8 +868,8 @@ vendor/etc/init/init.time_daemon.rc
 vendor/firmware/goodix_gt9886_limit_f10_first.tporder|acbd886e032c7d5b84fb0a075f924971dccfe587
 vendor/firmware/goodix_gt9886_limit_f10_second.tporder|d8f38e5ee33d05353d38cc31bf356ae0d839f2ff
 
-# WLAN - from davinci V12.5.2.0.RFJCNXM
--vendor/bin/cnss-daemon|0a39a83e0118c04f90a16c9a6152aaed4fb26a00
+# WLAN
+-vendor/bin/cnss-daemon
 
 # Xiaomi MAC
 -vendor/bin/nv_mac
