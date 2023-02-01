@@ -740,6 +740,8 @@ vendor/etc/init/vendor.qti.tftp.rc
 -vendor/lib64/libqcrilFramework.so
 -vendor/lib64/libqcrildatactl.so
 -vendor/lib64/libqdi.so
+-vendor/lib64/libqdp.so
+-vendor/lib64/libril-qc-hal-qmi.so
 -vendor/lib64/libril-qc-logger.so
 -vendor/lib64/librilqmiservices.so
 -vendor/lib64/libsystem_health_mon.so
@@ -780,10 +782,6 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
-
-# RIL - from surya V12.5.2.0 RJGEUXM
--vendor/lib64/libqdp.so|b3f268e6a6bafddbeae0e0af93fe1175e513cb91
--vendor/lib64/libril-qc-hal-qmi.so|4fcf41cd283932f3719ff5a337ef338be8e86cea
 
 # Sensors - from davinci V12.5.2.0.RFJCNXM
 -vendor/bin/sensors.qti|fea1ca9546af863cbe85e665510f5bc36a0d61bb
