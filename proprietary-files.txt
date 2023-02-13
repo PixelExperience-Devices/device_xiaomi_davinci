@@ -548,7 +548,6 @@ vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 -system_ext/lib64/libimsmedia_jni.so
 -system_ext/lib64/vendor.qti.diaghal@1.0.so
 -system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_system_ext
-system_ext/priv-app/ims/ims.apk
 -vendor/bin/ims_rtp_daemon
 -vendor/bin/imsdatadaemon
 -vendor/bin/imsqmidaemon
@@ -597,6 +596,9 @@ vendor/etc/seccomp_policy/imsrtp.policy
 -vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 -vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 -vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_vendor
+
+# IMS - from sweet V14.0.1.0.TKFEUXM (modified)
+system_ext/priv-app/ims/ims.apk|c9bfae627380ff34ec9b6352fc76b107da24c756
 
 # IPA
 vendor/etc/init/ipa_fws.rc
