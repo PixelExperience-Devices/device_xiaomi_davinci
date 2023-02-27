@@ -22,8 +22,19 @@ android_app {
         "vendor.xiaomi.hardware.motor-V1.0-java",
     ],
 
+    required: [
+        "vendor.xiaomi.hardware.motor@1.0-service.rc",
+    ],
+
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
 
+}
+
+prebuilt_etc {
+    name: "vendor.xiaomi.hardware.motor@1.0-service.rc",
+    src: "vendor.xiaomi.hardware.motor@1.0-service.rc",
+    sub_dir: "init",
+    vendor: true,
 }
