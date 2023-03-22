@@ -843,21 +843,25 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 -vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 -vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# Thermal - from davinci V12.5.2.0.RFJCNXM
--vendor/bin/mi_thermald|28333a36cea8ae97f15c4b4eb09b23578b83dbf0
--vendor/bin/thermal-engine|e74184e124c41e51535fad6a6ad9cc089695211b
-vendor/etc/init/init.mi_thermald.rc|93377ddf881f27dabb2918adbe7215934eb8531f
-vendor/etc/thermal-arvr.conf|ef5729c5966c9380d1f8b1f2767d7413ae5ac7c7
-vendor/etc/thermal-camera.conf|451615e7a26d852412f9762ae12d040c485ce60e
-vendor/etc/thermal-chg-only.conf|41f6f7536e9f81ebb7e82adeda2f5d9709c1e27c
-vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
-vendor/etc/thermal-map.conf|84673cc6b58f95c5f7521b571c6ae75760e74efc
-vendor/etc/thermal-nolimits.conf|172a0d5773a4545548133f92ca23b7d6f810a26f
-vendor/etc/thermal-normal.conf|4d8046d305b985012d71a89589dcd99d8082ebb6
-vendor/etc/thermal-phone.conf|306c8803da10ca5680b99f891688297467417d97
-vendor/etc/thermal-tgame.conf|fa1837e9730dbf5dca6e7b44fd2b803a1722d976
-vendor/etc/thermald-devices.conf|740ff93cd7e0ce49322db6871bbb2c5877dbcd88
--vendor/lib64/libthermalclient.so|41274c82e1a472d12b2ebcb4156f7f77b109efa8
+# Thermal
+-vendor/bin/mi_thermald
+-vendor/bin/thermal-engine
+vendor/etc/init/init.mi_thermald.rc
+vendor/etc/thermal-camera.conf
+vendor/etc/thermal-chg-only.conf
+vendor/etc/thermal-class0.conf
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-map.conf
+vendor/etc/thermal-mgame.conf
+vendor/etc/thermal-navigation.conf
+vendor/etc/thermal-nolimits.conf
+vendor/etc/thermal-normal.conf
+vendor/etc/thermal-phone.conf
+vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-video.conf
+vendor/etc/thermal-youtube.conf
+vendor/etc/thermald-devices.conf
+-vendor/lib64/libthermalclient.so
 
 # Time
 vendor/app/TimeService/TimeService.apk
