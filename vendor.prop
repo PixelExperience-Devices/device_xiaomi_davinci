@@ -115,6 +115,7 @@ camera.disable_zsl_mode=1
 
 # Chipset
 ro.soc.manufacturer=QTI
+ro.soc.model=SM7150
 
 # Data modules
 persist.vendor.data.iwlan.enable=true

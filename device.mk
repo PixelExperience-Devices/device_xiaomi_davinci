@@ -238,8 +238,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qti.early_init.sh
+    init.qcom.sh
 
 # IRSC
 PRODUCT_COPY_FILES += \
