@@ -838,13 +838,6 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json|b71553fa41fa7a9519a5d03b7a2d3850
 vendor/etc/sensors/config/tcs3701.json|8d29c45995d2fa7ed1d01aeeb3a5be3db2a1725c
 vendor/etc/sensors/sns_reg_config|891e6e552b64c29b61744dd53ea373ea0ce0aa40
 
-# Soter
-vendor/app/SoterService/SoterService.apk
--vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
--vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
--vendor/lib64/vendor.qti.hardware.soter@1.0.so
-
 # Thermal
 -vendor/bin/mi_thermald
 -vendor/bin/thermal-engine
