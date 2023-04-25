@@ -25,9 +25,6 @@
     <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
     <string name="ambient_display_gestures_title">Ambient display gestures</string>
 
-    <string name="doze_brightness_title">Always on brightness</string>
-    <string name="doze_brightness_summary">%s mode is enabled</string>
-
     <!-- Pickup sensor -->
     <string name="pickup_sensor_title">Pickup sensor</string>
 
