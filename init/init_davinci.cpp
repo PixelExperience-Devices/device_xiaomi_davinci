@@ -55,16 +55,6 @@ void property_override(char const prop[], char const value[], bool add = true)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void set_ro_build_prop(const std::string &prop, const std::string &value) {
-    for (const auto &source : ro_props_default_source_order) {
-        auto prop_name = "ro." + source + "build." + prop;
-        if (source == "")
-            property_override(prop_name.c_str(), value.c_str());
-        else
-            property_override(prop_name.c_str(), value.c_str(), false);
-    }
-};
-
 void set_ro_product_prop(const std::string &prop, const std::string &value) {
     for (const auto &source : ro_props_default_source_order) {
         auto prop_name = "ro.product." + source + prop;
@@ -80,33 +70,23 @@ void vendor_load_properties() {
 
     std::string model;
     std::string device;
-    std::string fingerprint;
-    std::string description;
     std::string mod_device;
 
     if (region == "GLOBAL") {
         model = "Mi 9T";
         device = "davinci";
-        fingerprint = "Xiaomi/davinci/davinci:11/RKQ1.200826.002/V12.1.4.0.RFJMIXM:user/release-keys";
-        description = "davinci-user 11 RKQ1.200826.002 V12.1.4.0.RFJMIXM release-keys";
         mod_device = "davinci_global";
     } else if (region == "CN") {
         model = "Redmi K20";
         device = "davinci";
-        fingerprint = "Xiaomi/davinci/davinci:11/RKQ1.200826.002/V12.5.2.0.RFJCNXM:user/release-keys";
-        description = "davinci-user 11 RKQ1.200826.002 V12.5.2.0.RFJCNXM release-keys";
     } else if (region == "INDIA") {
         model = "Redmi K20";
         device = "davinciin";
-        fingerprint = "Xiaomi/davinciin/davinciin:11/RKQ1.200826.002/V12.1.4.0.RFJINXM:user/release-keys";
-        description = "davinciin-user 11 RKQ1.200826.002 V12.1.4.0.RFJINXM release-keys";
         mod_device = "davinciin_in_global";
     }
 
-    set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
-    property_override("ro.build.description", description.c_str());
     property_override("bluetooth.device.default_name", model.c_str());
     property_override("vendor.usb.product_string", model.c_str());
     if (mod_device != "") {
