@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "WifiOverlayCN",
-    sdk_version: "current",
     product_specific: true
 }
