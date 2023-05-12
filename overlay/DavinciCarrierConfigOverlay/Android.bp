@@ -1,0 +1,7 @@
+runtime_resource_overlay {
+    name: "DavinciCarrierConfigOverlay",
+    theme: "DavinciCarrierConfigOverlay",
+    sdk_version: "current",
+    product_specific: true,
+    aaptflags: ["--keep-raw-values"],
+}

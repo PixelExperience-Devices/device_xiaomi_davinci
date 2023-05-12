@@ -317,11 +317,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/com.nxp.mifare.xml
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosp
-
-PRODUCT_ENFORCE_RRO_TARGETS += *
+PRODUCT_PACKAGES += \
+    AOSPDavinciApertureOverlay \
+    AOSPDavinciFaceUnlockServiceOverlay \
+    AOSPDavinciFrameworksOverlay \
+    AOSPDavinciSettingsOverlay \
+    AOSPDavinciSystemUIOverlay \
+    DavinciFrameworksOverlay \
+    DavinciSettingsOverlay \
+    DavinciSettingsProviderOverlay \
+    DavinciSystemUIOverlay \
+    DavinciTelephonyOverlay
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -348,7 +354,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
-    CarrierConfigOverlay \
+    DavinciCarrierConfigOverlay \
     libjson \
     libril \
     librilutils \
@@ -453,7 +459,7 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
-    WifiOverlay \
+    DavinciWifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
