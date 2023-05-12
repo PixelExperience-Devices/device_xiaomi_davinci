@@ -319,7 +319,6 @@ PRODUCT_PACKAGES += \
     AOSPDavinciApertureOverlay \
     AOSPDavinciFaceUnlockServiceOverlay \
     AOSPDavinciFrameworksOverlay \
-    AOSPDavinciSettingsOverlay \
     AOSPDavinciSystemUIOverlay \
     DavinciFrameworksOverlay \
     DavinciSettingsOverlay \
