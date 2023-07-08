@@ -15,10 +15,6 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 $(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# GMS
-TARGET_GAPPS_ARCH := arm64
-USE_GAPPS := true
-
 # Extras
 AWAKEN_BUILD_TYPE := official
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
